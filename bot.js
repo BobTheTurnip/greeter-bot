@@ -13,6 +13,9 @@ client.on('message', message => {
     if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
+    if (/\(\☞ﾟ\ヮﾟ\)\☞/g.test(message.content)) {
+        message.channel.send('\( \☞ﾟ\ヮﾟ\)\☞');
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
