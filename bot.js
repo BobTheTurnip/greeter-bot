@@ -11,7 +11,7 @@ client.on('message', message => {
     }
 
     if (/don(\'t|t) do/g(message.content.toLowerCase())) {
-        message('You cant tell me what to do!');
+        message.reply('You cant tell me what to do!');
     }
 });
 
