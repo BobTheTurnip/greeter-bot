@@ -10,9 +10,9 @@ client.on('message', message => {
         message.reply('*Pong* This is fun!');
     }
 
-    if (/don(\'t|t) do/g(message.content.toLowerCase())) {
-        message.reply('You cant tell me what to do!');
-    }
+    // if (/don(\'t|t) do/g(message.content.toLowerCase())) {
+    //    message.reply('You cant tell me what to do!');
+    // }
 });
 
 client.login(process.env.BOT_TOKEN);
