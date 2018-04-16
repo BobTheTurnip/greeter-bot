@@ -9,10 +9,6 @@ client.on('message', message => {
     if (message.content === '!ping') {
         message.reply('*Pong* This is fun!');
     }
-
-    if (to.lowercase(message.content) === /("don't do")/g) {
-        message('You cant tell me what to do!');
-    }
 });
 
 client.login(process.env.BOT_TOKEN);
