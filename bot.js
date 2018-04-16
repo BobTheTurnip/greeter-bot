@@ -10,7 +10,7 @@ client.on('message', message => {
         message.reply('*Pong* This is fun!');
     }
 
-    if (message.content == to.lowercase(/("don't do")/g)) {
+    if (to.lowercase(message.content) === /("don't do")/g) {
         message('You cant tell me what to do!');
     }
 });
