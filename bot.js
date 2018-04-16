@@ -9,13 +9,7 @@ client.on('message', message => {
     if (message.content === '!ping') {
         message.channel.send('*Pong* This is fun!');
     }
-    if (message.content === '!flip') {
-        message.channel.send('(╯°□°）╯︵ ┻━┻');
-    }
     
-    if (/(╯°□°）╯︵ ┻━┻/g.test((message.content).toLowerCase())) {
-        message.channel.send('┬──┬ ノ( ゜-゜ノ) Let\'s keep it orderly now');
-    }
     if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
