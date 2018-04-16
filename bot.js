@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!ping') {
-        message.reply('*Pong* This is fun!');
+        message.reply('*Pong* This is fun!!');
     }
 
     if (message.content == "div:contains('don't do')") {
