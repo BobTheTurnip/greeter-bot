@@ -13,9 +13,20 @@ client.on('message', message => {
     if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
-    
     if (/hello there/g.test((message.content).toLowerCase())) {
         message.channel.send('General Kenobi!');
+    }
+    if (/say hello/g.test((message.content).toLowerCase())) {
+        message.channel.send('Hello!');
+    }
+    if (/wat/g.test((message.content).toLowerCase())) {
+        message.channel.send('\*what');
+    }
+    if (/listen/g.test((message.content).toLowerCase())) {
+        message.channel.send('What? listerning? Who\'s doing that?');
+    }
+    if (/(murder|kill)/g.test((message.content).toLowerCase())) {
+        message.channel.send('*Calls Police*');
     }
     if (/\(\╯\°\□\°\）\╯\︵ \┻\━\┻/g.test((message.content).toLowerCase())) {
         message.channel.send('\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
