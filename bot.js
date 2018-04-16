@@ -10,7 +10,7 @@ client.on('message', message => {
         message.channel.send('*Pong* This is fun!');
     }
     
-    if (/don(\'t|t) do/g.test(message.content.toLowerCase())) {
+    if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
 });
