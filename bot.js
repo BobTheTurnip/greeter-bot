@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!ping') {
-        message: '*Pong* This is fun!';
+        message.channel.send('*Pong* This is fun!');
     }
     
     //if (/don(\'t|t) do/g(message.content.toLowerCase())) {
