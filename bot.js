@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!ping') {
-        message.reply('*Pong* This is fun!');
+        message: '*Pong* This is fun!';
     }
     
     //if (/don(\'t|t) do/g(message.content.toLowerCase())) {
