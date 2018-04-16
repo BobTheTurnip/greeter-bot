@@ -13,11 +13,15 @@ client.on('message', message => {
     if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
+    
+    if (/hello there/g.test((message.content).toLowerCase())) {
+        message.channel.send('General Kenobi!');
+    }
     if (/\(\╯\°(\□|\Д)\°\）\╯\︵ \┻\━\┻/g.test((message.content).toLowerCase())) {
         message.channel.send('\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
     }
     if (/\(\☞ﾟ\ヮﾟ\)\☞/g.test(message.content)) {
-        message.channel.send('        \☜\(ﾟ\ヮﾟ\☜\)');
+        message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
 });
 
