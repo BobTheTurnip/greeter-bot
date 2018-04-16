@@ -23,7 +23,7 @@ client.on('message', message => {
         message.channel.send('\*what');
     }
     if (/listen/g.test((message.content).toLowerCase())) {
-        message.channel.send('What? listerning? Who\'s doing that?');
+        message.channel.send('What? listerning? Who\'s doing that? Certainly not me!');
     }
     if (/(murder|kill)/g.test((message.content).toLowerCase())) {
         message.channel.send('*Calls Police*');
