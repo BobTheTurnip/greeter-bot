@@ -17,7 +17,7 @@ client.on('message', message => {
     if (/hello there/g.test((message.content).toLowerCase())) {
         message.channel.send('General Kenobi!');
     }
-    if (/\(\╯\°(\□|\Д)\°\）\╯\︵ \┻\━\┻/g.test((message.content).toLowerCase())) {
+    if (/\(\╯\°\□\°\）\╯\︵ \┻\━\┻/g.test((message.content).toLowerCase())) {
         message.channel.send('\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
     }
     if (/\(\☞ﾟ\ヮﾟ\)\☞/g.test(message.content)) {
