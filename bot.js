@@ -16,6 +16,9 @@ client.on('message', message => {
     if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
+    if (/good bot/g.test((message.content).toLowerCase())) {
+        message.channel.send('*purrs softly*');
+    }
     if (/hello there/g.test((message.content).toLowerCase())) {
         message.channel.send('General Kenobi!');
     }
