@@ -28,7 +28,7 @@ client.on('message', message => {
     if (/say hello/g.test((message.content).toLowerCase())) {
         message.channel.send('Hello!');
     }
-    if (/wat/g.test((message.content).toLowerCase())) {
+    if (/^\s+$wat^\s+$/g.test((message.content).toLowerCase())) {
         message.channel.send('\*what');
     }
     if (/listen/g.test((message.content).toLowerCase())) {
