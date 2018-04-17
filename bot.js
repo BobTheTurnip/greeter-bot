@@ -13,7 +13,7 @@ client.on('message', message => {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
     
-    if (/don(\'t|t) do/g.test((message.content).toLowerCase())) {
+    if (/don(\'t|t)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
     if (/good bot/g.test((message.content).toLowerCase())) {
