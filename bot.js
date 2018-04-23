@@ -22,7 +22,7 @@ client.on('message', message => {
     if (/(^|\s)bad bot($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('BobBot will remember that.');
     }
-    if (/(^|\s)hello there($|\s|\?)/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)hello there($|\s|\?|\!)/g.test((message.content).toLowerCase())) {
         message.channel.send('General Kenobi!');
     }
     if (/(^|\s)say hello($|\s|\?)/g.test((message.content).toLowerCase())) {
