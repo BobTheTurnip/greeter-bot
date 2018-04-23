@@ -13,34 +13,34 @@ client.on('message', message => {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
     
-    if (/don(\'t|t)/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)don(\'t|t)($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
-    if (/good bot/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)good bot($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('*purrs softly*');
     }
-    if (/bad bot/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)bad bot($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('BobBot will remember that.');
     }
-    if (/hello there/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)hello there($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('General Kenobi!');
     }
-    if (/say hello/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)say hello($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('Hello!');
     }
     if (/(^|\s)w(a|o|u)t($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('\*what');
     }
-    if (/listen/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)listen/g.test((message.content).toLowerCase())) {
         message.channel.send('What? listerning? Who\'s doing that? Certainly not me!');
     }
-    if (/(murder|kill)/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)(murder|kill)($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('*Calls Police*');
     }
-    if (/\(\╯\°\□\°\）\╯\︵ \┻\━\┻/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)\(\╯\°\□\°\）\╯\︵ \┻\━\┻($|\s)/g.test((message.content).toLowerCase())) {
         message.channel.send('\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
     }
-    if (/\(\☞ﾟ\ヮﾟ\)\☞/g.test(message.content)) {
+    if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
 });
