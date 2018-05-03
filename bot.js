@@ -13,11 +13,8 @@ client.on('message', message => {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
     if (message.content === '!roll') {
-        var str1 = 'You got a ';
-        var str2 = Math.floor(Math.random() * 6).toString();
-        var con = str1.concat(str2);
-        var str1 = '!';
-        var con = con.concat(str1);
+        var con = 'You got a '.concat(Math.floor(Math.random() * 6));
+        var con = con.concat('!');
         message.channel.send(con);
     }
     
