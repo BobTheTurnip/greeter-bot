@@ -14,7 +14,7 @@ client.on('message', message => {
     }
     if (message.content === '!roll') {
         var str1 = 'You got a ';
-        var str2 = Math.floor(Math.random() * 6).toString;
+        var str2 = Math.floor(Math.random() * 6).toString();
         var con = str1.concat(str2);
         var str1 = '!';
         var con = con.concat(str1);
