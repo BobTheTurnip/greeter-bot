@@ -23,7 +23,7 @@ client.on('message', message => {
     }
     if(message.content.substring(0, 5) === '!roll'){
         var num = 6;
-        var res = message.content.substring(6);
+        var res = message.content.substring(7);
         var con = '';
         if(res != '' && Number.isInteger(res))
             num = res;
