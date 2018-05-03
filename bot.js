@@ -26,7 +26,7 @@ client.on('message', message => {
         var res = message.content.substring(6);
         var con = '';
         if(res != '' && Number.isInteger(res))
-            num = message.content.substring(6);
+            num = res;
         con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
         con = con.concat('!');
         message.channel.send(con);
