@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(message.content === '!help'){
-        message.channel.send('Hello! BobBot can ' + 'annoy'.strike() + ' help you in a few ways!');
+        message.channel.send('Hello! BobBot can --annoy-- help you in a few ways!');
         message.channel.send('**!help**   Its what you\'re looking at dingus!');
         message.channel.send('**!ping**   If you want to see the responce time of the bot!');
         message.channel.send('**!flip**   You can flip the table in any situation!');
