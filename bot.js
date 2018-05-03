@@ -28,7 +28,7 @@ client.on('message', message => {
         if(res != '')
             num = res;
         var rnd = Math.floor(Math.random() * num) + 1;
-        if(rnd === NaN || rnd === Infinity)
+        if(!(Number.isInteger(rnd)))
             rnd = Math.floor(Math.random() * 6) + 1;
         con = 'You got a '.concat(rnd);
         con = con.concat('!');
