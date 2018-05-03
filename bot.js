@@ -12,7 +12,8 @@ client.on('message', message => {
         message.channel.send('**!ping**   If you want to see the responce time of the bot!');
         message.channel.send('**!flip**   You can flip the table in any situation!');
         message.channel.send('**!roll x** Roll an **x** sided die!');
-        message.channel.send('Bob bot may also interfere with any conversation! *no relation to the zucc you have been warned*');
+        message.channel.send('Bob bot may also interfere with any conversation!');
+        message.channel.send('*No relation to the zucc you have been warned*');
     }
     if(message.content === '!ping'){
         message.channel.send('*Pong* This is fun!');
