@@ -12,6 +12,9 @@ client.on('message', message => {
     if (message.content === '!flip') {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
+    if (message.content === '!roll') {
+        message.channel.send(Math.floor(Math.random() * 6));
+    }
     
     if (/(^|\s)don(\'t|t)($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
