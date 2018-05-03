@@ -6,25 +6,17 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-        args = args.splice(1);
-        switch(cmd) {
-            case 'ping':
-                message.channel.send('*Pong* This is fun!');
-            break;
-            case 'flip':
-                message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
-            break;
-            case 'roll'
-                var num = 6;
-                var con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
-                var con = con.concat('!');
-                message.channel.send(con);
-            break;
-         }
+    if(message.content === 'ping'){
+        message.channel.send('*Pong* This is fun!');
+    }
+    if(message.content === 'ping'){
+        message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
+    }
+    if(message.content === 'ping'){
+        var num = 6;
+        var con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
+        var con = con.concat('!');
+        message.channel.send(con);
     }
     
     if (/(^|\s)don(\'t|t)($|\s|\?)/g.test((message.content).toLowerCase())) {
