@@ -23,10 +23,12 @@ client.on('message', message => {
     }
     if(message.content.substring(0, 5) === '!roll'){
         var num = 6;
-        if(message.content.substring(6) != '')
+        var res = message.content.substring(6);
+        var con = '';
+        if(res != '' && Number.isInteger(res))
             num = message.content.substring(6);
-        var con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
-        var con = con.concat('!');
+        con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
+        con = con.concat('!');
         message.channel.send(con);
     }
     
