@@ -23,9 +23,9 @@ client.on('message', message => {
     }
     if(message.content.substring(0, 5) === '!roll'){
         var num = 6;
-        var res = message.content.substring(7);
+        var res = message.content.substring(6);
         var con = '';
-        if(res != '' && Number.isInteger(res))
+        if(res != '')
             num = res;
         con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
         con = con.concat('!');
