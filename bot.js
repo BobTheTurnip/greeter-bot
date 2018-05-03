@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(message.content === '!help'){
-        var amalgam = 'Hello! BobBot can --annoy-- help you in a few ways!\n'.concat('**!help**    Its what you\'re looking at dingus!\n');
+        var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('**!help**    Its what you\'re looking at dingus!\n');
         amalgam = amalgam.concat('**!help**    Its what you\'re looking at dingus!\n');
         amalgam = amalgam.concat('**!ping**    If you want to see the responce time of the bot!\n');
         amalgam = amalgam.concat('**!flip**     You can flip the table in any situation!\n');
