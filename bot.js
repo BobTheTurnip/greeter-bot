@@ -27,7 +27,10 @@ client.on('message', message => {
         var con = '';
         if(res != '')
             num = res;
-        con = 'You got a '.concat(Math.floor(Math.random() * num) + 1);
+        var rnd = Math.floor(Math.random() * num) + 1;
+        if(rnd === 'NaN' || rnd === Infinity)
+            rnd = Math.floor(Math.random() * 6) + 1;
+        con = 'You got a '.concat(rnd);
         con = con.concat('!');
         message.channel.send(con);
     }
