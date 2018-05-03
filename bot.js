@@ -7,13 +7,14 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(message.content === '!help'){
-        message.channel.send('Hello! BobBot can --annoy-- help you in a few ways!');
-        message.channel.send('**!help**    Its what you\'re looking at dingus!');
-        message.channel.send('**!ping**    If you want to see the responce time of the bot!');
-        message.channel.send('**!flip**     You can flip the table in any situation!');
-        message.channel.send('**!roll x**  Roll an **x** sided die!');
-        message.channel.send('Bob bot may also interfere with any conversation!');
-        message.channel.send('*No relation to the zucc you have been warned*');
+        var amalgam = 'Hello! BobBot can --annoy-- help you in a few ways!\n'.concat('**!help**    Its what you\'re looking at dingus!\n');
+        amalgam = amalgam.concat('**!help**    Its what you\'re looking at dingus!\n');
+        amalgam = amalgam.concat('**!ping**    If you want to see the responce time of the bot!\n');
+        amalgam = amalgam.concat('**!flip**     You can flip the table in any situation!\n');
+        amalgam = amalgam.concat('**!roll x**  Roll an **x** sided die!\n');
+        amalgam = amalgam.concat('Bob bot may also interfere with any conversation!\n');
+        amalgam = amalgam.concat('*No relation to the zucc you have been warned*');
+        message.channel.send(amalgam);
     }
     if(message.content === '!ping'){
         message.channel.send('*Pong* This is fun!');
