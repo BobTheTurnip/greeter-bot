@@ -13,7 +13,12 @@ client.on('message', message => {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
     if (message.content === '!roll') {
-        message.channel.send('You got a ' + Math.floor(Math.random() * 6));
+        var str1 = 'You got a ';
+        var srt2 = Math.floor(Math.random() * 6);
+        var con = str1.concat(str2);
+        var str1 = '!';
+        var con = con.concat(str1);
+        message.channel.send(con);
     }
     
     if (/(^|\s)don(\'t|t)($|\s|\?)/g.test((message.content).toLowerCase())) {
