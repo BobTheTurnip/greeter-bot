@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+//var newMessage = 86400000;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -65,6 +66,11 @@ client.on('message', message => {
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
+    
+    //if(Date.now.getDay == newMessage)
+    //{
+    //    newMassage = 
+    //}
 });
 
 client.login(process.env.BOT_TOKEN);
