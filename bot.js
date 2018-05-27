@@ -67,7 +67,7 @@ client.on('message', message => {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
     
-    var temp = new Date(1111, 11, 27, 1, 1, 1, 1);
+    var temp = new Date.now();
     if(temp.getDay() == newGreeting)
     {
         newGreeting += 1;
