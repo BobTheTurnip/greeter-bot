@@ -65,6 +65,10 @@ client.on('message', message => {
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
+    
+    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo)($|\s|\?)/g.test(message.content)) {
+        message.channel.send('No you');
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
