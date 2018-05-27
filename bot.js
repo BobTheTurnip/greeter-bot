@@ -66,7 +66,7 @@ client.on('message', message => {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
     
-    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo)($|\s|\?)/g.test(message.content)) {
+    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content)) {
         message.channel.send('No you');
     }
 });
