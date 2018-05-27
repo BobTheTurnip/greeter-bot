@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//var newMessage = 86400000;
+var newGreeting = 27;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -67,10 +67,12 @@ client.on('message', message => {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
     
-    //if(Date.now.getDay == newMessage)
-    //{
-    //    newMassage = 
-    //}
+    var temp = new Date()
+    if(temp.getDay() == newGreeting)
+    {
+        newGreeting += 1;
+        message.channel.send("@BobTheTurnip#9562 You are shit!");
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
