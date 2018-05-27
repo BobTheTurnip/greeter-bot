@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var newGreeting = 27;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -65,13 +64,6 @@ client.on('message', message => {
     }
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
-    }
-    
-    var temp = new Date.now();
-    if(temp.getDay() == newGreeting)
-    {
-        newGreeting += 1;
-        message.channel.send("@BobTheTurnip#9562 You are shit!");
     }
 });
 
