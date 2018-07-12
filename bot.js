@@ -35,7 +35,7 @@ client.on('message', message => {
         message.channel.send(con);
     }
     
-    if (/(^|\s)don(\'t|t)($|\s|\?)/g.test((message.content).toLowerCase())) {
+    if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
     if (/(^|\s)good bot($|\s|\?)/g.test((message.content).toLowerCase())) {
