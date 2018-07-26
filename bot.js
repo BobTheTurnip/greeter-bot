@@ -65,9 +65,11 @@ client.on('message', message => {
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
-    
     if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content)) {
-        message.channel.send('No you');
+        message.channel.send('No U');
+    }
+    if (/(^|\s)(you|your|ur|u) mum gay($|\s|\?)/g.test(message.content)) {
+        message.channel.send('No U');
     }
 });
 
