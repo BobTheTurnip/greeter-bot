@@ -9,7 +9,7 @@ function txt_check(check, out) {
     if (/(^|\s)check($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send(out);
     }
-}
+};
 
 client.on('message', message => {
     if(message.content === '!help'){
