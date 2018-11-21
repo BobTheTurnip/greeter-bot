@@ -4,17 +4,18 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
+
 function txt_check(check, out) {
-    var temp = '(/(^|\s)';
+    var temp = '/(^|\s)';
     temp = temp.concat(check);
     temp = temp.concat('($|\s|\?)');
-    if temp/g.test((message.content).toLowerCase())) {
+    if (temp/g.test((message.content).toLowerCase())) {
         message.channel.send(out);
     }
 };
 
 client.on('message', message => {
-    if(message.content === '!help'){
+    if (message.content === '!help') {
         var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       Its what you\'re looking at dingus!\n\n');
         amalgam = amalgam.concat('`!ping`       If you want to see the responce time of the bot!\n\n');
         amalgam = amalgam.concat('`!flip`       You can flip the table in any situation!\n\n');
@@ -23,28 +24,28 @@ client.on('message', message => {
         amalgam = amalgam.concat('*You have been warned*');
         message.channel.send(amalgam);
     }
-    if(message.content === '!ping'){
+    if (message.content === '!ping') {
         message.channel.send('*Pong* This is fun!');
     }
-    if(message.content === '!flip'){
+    if (message.content === '!flip') {
         message.channel.send('\(\╯\°\□\°\）\╯\︵ \┻\━\┻');
     }
-    if(message.content.substring(0, 5) === '!roll'){    // Dice roller
+    if (message.content.substring(0, 5) === '!roll') {    // Dice roller
         var num = 6;
         var res = message.content.substring(6);
         var con = '';
-        if(res != '')
+        if (res != '')
             num = res;
         var rnd = Math.floor(Math.random() * num) + 1;
-        if(!(Number.isInteger(rnd)))
+        if (!(Number.isInteger(rnd)))
             rnd = Math.floor(Math.random() * 6) + 1;
         con = 'You got a '.concat(rnd);
         con = con.concat('!');
         message.channel.send(con);
     }
-            // text check
+    // text check
     txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!');
-    txt_check('good bot', '*Purrs softly*'');
+    txt_check('good bot', '*Purrs softly*');
     txt_check('bad bot', 'BobBot will remember that.');
     txt_check('hello there', 'General Kenobi!');
     txt_check('say hello', 'Hello!');
