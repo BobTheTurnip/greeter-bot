@@ -6,7 +6,10 @@ client.on('ready', () => {
 });
 
 function txt_check(check, out) {
-    if (/(^|\s)check($|\s|\?)/g.test((message.content).toLowerCase())) {
+    var temp = '(/(^|\s)';
+    temp = temp.concat(check);
+    temp = temp.concat('($|\s|\?)');
+    if temp/g.test((message.content).toLowerCase())) {
         message.channel.send(out);
     }
 };
