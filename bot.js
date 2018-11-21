@@ -9,10 +9,10 @@ function txt_check(check, out) {
     var temp = '/(^|\s)';
     temp = temp.concat(check);
     temp = temp.concat('($|\s|\?)');
-    if (temp/g.test((message.content).toLowerCase())) {
+    if (temp/g.test(message.content.toLowerCase())) {
         message.channel.send(out);
     }
-};
+}
 
 client.on('message', message => {
     if (message.content === '!help') {
@@ -34,10 +34,10 @@ client.on('message', message => {
         var num = 6;
         var res = message.content.substring(6);
         var con = '';
-        if (res != '')
+        if (res !== '')
             num = res;
         var rnd = Math.floor(Math.random() * num) + 1;
-        if (!(Number.isInteger(rnd)))
+        if (!Number.isInteger(rnd))
             rnd = Math.floor(Math.random() * 6) + 1;
         con = 'You got a '.concat(rnd);
         con = con.concat('!');
