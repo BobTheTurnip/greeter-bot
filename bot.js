@@ -4,7 +4,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-/*
 function txt_check(check, out) {
     var temp = '(/(^|\s)';
     temp = temp.concat(check);
@@ -13,7 +12,7 @@ function txt_check(check, out) {
         message.channel.send(out);
     }
 };
-*/
+
 client.on('message', message => {
     if(message.content === '!help'){
         var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       Its what you\'re looking at dingus!\n\n');
@@ -44,18 +43,18 @@ client.on('message', message => {
         message.channel.send(con);
     }
             // text check
-    txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!')
-    txt_check('good bot', '*Purrs softly*'')
-    txt_check('bad bot', 'BobBot will remember that.')
-    txt_check('hello there', 'General Kenobi!')
-    txt_check('say hello', 'Hello!')
-    txt_check('w(a|o|u)t', '\*what')
-    txt_check('listen', 'What? listerning? Who\'s doing that? Certainly not me!')
-    txt_check('(murder|kill)', '*Calls Police*')
-    txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻', '\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here')
-    txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)')
-    txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U')
-    txt_check('(you|your|ur|u) mum g(a|e)y', 'No U')
+    txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!');
+    txt_check('good bot', '*Purrs softly*'');
+    txt_check('bad bot', 'BobBot will remember that.');
+    txt_check('hello there', 'General Kenobi!');
+    txt_check('say hello', 'Hello!');
+    txt_check('w(a|o|u)t', '\*what');
+    txt_check('listen', 'What? listerning? Who\'s doing that? Certainly not me!');
+    txt_check('(murder|kill)', '*Calls Police*');
+    txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻', '\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
+    txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
+    txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U');
+    txt_check('(you|your|ur|u) mum g(a|e)y', 'No U');
     /*
     if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
