@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-
+/*
 function txt_check(check, out) {
     var temp = '(/(^|\s)';
     temp = temp.concat(check);
@@ -13,7 +13,7 @@ function txt_check(check, out) {
         message.channel.send(out);
     }
 };
-
+*/
 client.on('message', message => {
     if(message.content === '!help'){
         var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       Its what you\'re looking at dingus!\n\n');
