@@ -4,8 +4,8 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-
-function txt_check(check, out) {
+/*
+function txt_check (check, out) {
     var temp = '/(^|\s)';
     temp = temp.concat(check);
     temp = temp.concat('($|\s|\?)');
@@ -13,12 +13,12 @@ function txt_check(check, out) {
         message.channel.send(out);
     }
 }
-
+*/
 client.on('message', message => {
     if(message.author.bot) return;
 
     if (message.content === '!help') {
-        var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       Its what you\'re looking at dingus!\n\n');
+        var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       It\'s what you\'re looking at dingus!\n\n');
         amalgam = amalgam.concat('`!ping`       If you want to see the responce time of the bot!\n\n');
         amalgam = amalgam.concat('`!flip`       You can flip the table in any situation!\n\n');
         amalgam = amalgam.concat('`!roll x`     Roll an **x** sided die! Or 6 if you give nothing!\n\n');
@@ -45,7 +45,7 @@ client.on('message', message => {
         con = con.concat('!');
         message.channel.send(con);
     }
-    // text check
+    /* text check
     txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!');
     txt_check('good bot', '*Purrs softly*');
     txt_check('bad bot', 'BobBot will remember that.');
@@ -58,7 +58,7 @@ client.on('message', message => {
     txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U');
     txt_check('(you|your|ur|u) mum g(a|e)y', 'No U');
-    /*
+    */
     if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
@@ -95,7 +95,7 @@ client.on('message', message => {
     if (/(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
-    */
+    
 });
 
 client.login(process.env.BOT_TOKEN);
