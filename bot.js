@@ -5,11 +5,12 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-function txt_check (check, out) {
+function txt_check(check, out) {
     var temp = '/(^|\s)' + check + '($|\s|\?)';
     if (temp/g.test(message.content.toLowerCase())) {
         message.channel.send(out);
     }
+    return 0;
 }
 
 client.on('message', message => {
