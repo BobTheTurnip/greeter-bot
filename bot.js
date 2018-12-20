@@ -8,9 +8,9 @@ client.on('ready', () => {
 function txt_check(check, out) {
     var temp = '/(^|\s)' + check + '($|\s|\?)';
     if (temp/g.test(message.content.toLowerCase())) {
-        message.channel.send(out);
+        return out;
     }
-    return 0;
+    else return;
 }
 
 client.on('message', message => {
