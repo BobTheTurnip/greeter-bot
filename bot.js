@@ -4,14 +4,14 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-/*
+
 function txt_check (check, out) {
     var temp = '/(^|\s)' + check + '($|\s|\?)';
     if (temp/g.test(message.content.toLowerCase())) {
         message.channel.send(out);
     }
 }
-*/
+
 client.on('message', message => {
     if(message.author.bot) return;
 
