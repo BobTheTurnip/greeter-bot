@@ -6,9 +6,7 @@ client.on('ready', () => {
 });
 /*
 function txt_check (check, out) {
-    var temp = '/(^|\s)';
-    temp = temp.concat(check);
-    temp = temp.concat('($|\s|\?)');
+    var temp = '/(^|\s)' + check + '($|\s|\?)';
     if (temp/g.test(message.content.toLowerCase())) {
         message.channel.send(out);
     }
@@ -45,20 +43,21 @@ client.on('message', message => {
         con = con.concat('!');
         message.channel.send(con);
     }
-    /* text check
-    txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!');
-    txt_check('good bot', '*Purrs softly*');
-    txt_check('bad bot', 'BobBot will remember that.');
-    txt_check('hello there', 'General Kenobi!');
-    txt_check('say hello', 'Hello!');
-    txt_check('w(a|o|u)t', '\*what');
-    txt_check('listen', 'What? listerning? Who\'s doing that? Certainly not me!');
-    txt_check('(murder|kill)', '*Calls Police*');
-    txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻', '\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
-    txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
-    txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U');
-    txt_check('(you|your|ur|u) mum g(a|e)y', 'No U');
-    */
+    // text check
+    message.channel.send(txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!'));
+    message.channel.send(txt_check('good bot', '*Purrs softly*'));
+    message.channel.send(txt_check('bad bot', 'BobBot will remember that.'));
+    message.channel.send(txt_check('hello there', 'General Kenobi!'));
+    message.channel.send(txt_check('say hello', 'Hello!'));
+    message.channel.send(txt_check('w(a|o|u)t', '\*what'));
+    message.channel.send(txt_check('listen', 'What? listerning? Who\'s doing that? Certainly not me!'));
+    message.channel.send(txt_check('(murder|kill)', '*Calls Police*'));
+    message.channel.send(txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻', '\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here'));
+    message.channel.send(txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)'));
+    message.channel.send(txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U'));
+    message.channel.send(txt_check('(you|your|ur|u) mum g(a|e)y', 'No U'));
+    message.channel.send(txt_check('no (you|u)', 'No U'));
+    /*
     if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
@@ -95,7 +94,10 @@ client.on('message', message => {
     if (/(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
-    
+    if (/(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
+        message.channel.send('No U');
+    }
+    */
 });
 
 client.login(process.env.BOT_TOKEN);
