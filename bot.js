@@ -5,12 +5,12 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-function txt_check(check, out) {
+function txt_check(check) {
     var temp = '/(^|\s)' + check + '($|\s|\?)';
     if (temp/g.test(message.content.toLowerCase())) {
-        return out;
+        return true;
     }
-    else return;
+    else return false;
 }
 
 client.on('message', message => {
@@ -45,19 +45,19 @@ client.on('message', message => {
         message.channel.send(con);
     }
     // text check
-    message.channel.send(txt_check('don(\'t|t)( |)do', 'You cant tell me what to do!'));
-    message.channel.send(txt_check('good bot', '*Purrs softly*'));
-    message.channel.send(txt_check('bad bot', 'BobBot will remember that.'));
-    message.channel.send(txt_check('hello there', 'General Kenobi!'));
-    message.channel.send(txt_check('say hello', 'Hello!'));
-    message.channel.send(txt_check('w(a|o|u)t', '\*what'));
-    message.channel.send(txt_check('listen', 'What? listerning? Who\'s doing that? Certainly not me!'));
-    message.channel.send(txt_check('(murder|kill)', '*Calls Police*'));
-    message.channel.send(txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻', '\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here'));
-    message.channel.send(txt_check('\(\☞ﾟ\ヮﾟ\)\☞', '\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)'));
-    message.channel.send(txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)', 'No U'));
-    message.channel.send(txt_check('(you|your|ur|u) mum g(a|e)y', 'No U'));
-    message.channel.send(txt_check('no (you|u)', 'No U'));
+    if (txt_check('don(\'t|t)( |)do')) message.channel.send('You cant tell me what to do!');
+    if (txt_check('good bot')) message.channel.send('*Purrs softly*');
+    if (txt_check('bad bot')) message.channel.send('BobBot will remember that.');
+    if (txt_check('hello there')) message.channel.send('General Kenobi!');
+    if (txt_check('say hello')) message.channel.send('Hello!');
+    if (txt_check('w(a|o|u)t')) message.channel.send('\*what');
+    if (txt_check('listen')) message.channel.send('What? listerning? Who\'s doing that? Certainly not me!');
+    if (txt_check('(murder|kill)')) message.channel.send('*Calls Police*');
+    if (txt_check('\(\╯\°\□\°\）\╯\︵ \┻\━\┻')) message.channel.send('\┬\─\┬\ノ\( \º \_ \º\ノ\) Let\'s keep it civil here');
+    if (txt_check('\(\☞ﾟ\ヮﾟ\)\☞')) message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
+    if (txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)')) message.channel.send('No U');
+    if (txt_check('(you|your|ur|u) mum g(a|e)y')) message.channel.send('No U');
+    if (txt_check('no (you|u)')) message.channel.send('No U');
     /*
     if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
