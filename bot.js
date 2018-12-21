@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
-
+/*
 function txt_check(check) {
     var temp = '(^|\s)' + check + '($|\s|\?)';
     if (/temp/g.test(message.content.toLowerCase())) {
@@ -12,7 +12,7 @@ function txt_check(check) {
     }
     else return false;
 }
-
+*/
 client.on('message', message => {
     if(message.author.bot) return;
 
@@ -44,7 +44,7 @@ client.on('message', message => {
         con = con.concat('!');
         message.channel.send(con);
     }
-    // text check
+    /* text check
     if (txt_check('don(\'t|t)( |)do')) message.channel.send('You cant tell me what to do!');
     if (txt_check('good bot')) message.channel.send('*Purrs softly*');
     if (txt_check('bad bot')) message.channel.send('BobBot will remember that.');
@@ -58,7 +58,7 @@ client.on('message', message => {
     if (txt_check('f(u|o|oo)(c|ck|k) (u|you|yoo|off)')) message.channel.send('No U');
     if (txt_check('(you|your|ur|u) mum g(a|e)y')) message.channel.send('No U');
     if (txt_check('no (you|u)')) message.channel.send('No U');
-    /*
+    */
     if (/(^|\s)don(\'t|t)( |)do($|\s|\?)/g.test((message.content).toLowerCase())) {
         message.channel.send('You cant tell me what to do!');
     }
@@ -98,7 +98,7 @@ client.on('message', message => {
     if (/(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
-    */
+    //
 });
 
 client.login(process.env.BOT_TOKEN);
