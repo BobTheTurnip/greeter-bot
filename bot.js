@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 function txt_check(check) {
-    var temp = '/(^|\s)' + check + '($|\s|\?)';
-    if (temp/g.test(message.content.toLowerCase())) {
+    var temp = '(^|\s)' + check + '($|\s|\?)';
+    if (/temp/g.test(message.content.toLowerCase())) {
         return true;
     }
     else return false;
