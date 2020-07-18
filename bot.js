@@ -89,17 +89,15 @@ client.on('message', message => {
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
-    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content) || /(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content) || /(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
+    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content) /* || /(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content) || /(^|\s)no (you|u)($|\s|\?)/g.test(message.content)*/) {
         message.channel.send('No U');
     }
-    /*
     if (/(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
     if (/(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
-    */
 });
 
 client.login(process.env.BOT_TOKEN);
