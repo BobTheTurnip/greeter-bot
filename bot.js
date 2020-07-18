@@ -18,7 +18,7 @@ client.on('message', message => {
 
     if (message.content === '!help') {
         var amalgam = 'Hello! BobBot can ~~annoy~~ help you in a few ways!\n'.concat('`!help`       It\'s what you\'re looking at dingus!\n\n');
-        amalgam = amalgam.concat('`!ping`       If you want to see the responce time of the bot!\n\n');
+        amalgam = amalgam.concat('`!ping`       If you want to see the response time of the bot!\n\n');
         amalgam = amalgam.concat('`!flip`       You can flip the table in any situation!\n\n');
         amalgam = amalgam.concat('`!roll x`     Roll an **x** sided die! Or 6 if you give nothing!\n\n');
         amalgam = amalgam.concat('Bob bot may also interfere with any conversation!\n');
@@ -89,16 +89,17 @@ client.on('message', message => {
     if (/(^|\s)\(\☞ﾟ\ヮﾟ\)\☞($|\s|\?)/g.test(message.content)) {
         message.channel.send('\\\\\\\\\\\\\☜\(ﾟ\ヮﾟ\☜\)');
     }
-    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content)) {
+    if (/(^|\s)f(u|o|oo)(c|ck|k) (u|you|yoo|off)($|\s|\?)/g.test(message.content) || /(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content) || /(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
+    /*
     if (/(^|\s)(you|your|ur|u) mum g(a|e)y($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
     if (/(^|\s)no (you|u)($|\s|\?)/g.test(message.content)) {
         message.channel.send('No U');
     }
-    //
+    */
 });
 
 client.login(process.env.BOT_TOKEN);
